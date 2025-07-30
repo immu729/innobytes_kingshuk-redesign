@@ -391,6 +391,10 @@ p span{
   color: white;
 }
 
+.contact-left h2 {
+  color: rgb(15, 66, 30);
+}
+
 .contact-left a {
   color: white;
   text-decoration: none;
@@ -495,5 +499,355 @@ p span{
 
   .name-fields {
     flex-direction: column;
+  }
+}
+
+
+/* about style add */
+
+.about-section {
+  padding: 60px 30px;
+  background: linear-gradient(135deg, #f2f2f2, #ffffff);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-image img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(1, 41, 58, 0.6);
+  animation: slideLeft 1s ease forwards;
+}
+
+.about-content {
+  flex: 1 1 400px;
+  animation: slideRight 1s ease forwards;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #194144;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #020519;
+  margin-bottom: 25px;
+}
+
+.about-address {
+  font-size: 16px;
+  color: #34634f;
+  margin-bottom: 25px;
+}
+
+.about-address a {
+  text-decoration: none;
+  color: #c2135c;
+  font-weight: bold;
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #e67e22;
+  color: white;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #1d7073;
+  transform: translateY(-3px);
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-btn {
+    margin-top: 10px;
+  }
+}
+
+/* services section */
+.services-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background: #fefefe;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  margin-right: 30px;
+  animation: pqy 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes pqy {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(20deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.services-content {
+  max-width: 600px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.animated-heading {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  animation: slideUp 1.5s ease-in-out forwards;
+}
+
+.highlight {
+  color: #e67e22;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(98, 8, 8, 0.645);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 120, 180, 0.65);
+}
+
+.icon-box {
+  font-size: 30px;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* gallery section */
+.gallery-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.gallery-heading {
+  font-size: 36px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  animation: slideInTop 1.5s ease forwards;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 10px;
+}
+
+.gallery-item {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  background-color: #fdfdfd;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #ddd;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item p {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Hover Zoom Effect */
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+.zoom-in {
+  animation: zoomIn 1.2s ease-in-out;
+}
+.slide-left {
+  animation: slideLeft 1.2s ease-in-out;
+}
+.slide-right {
+  animation: slideRight 1.2s ease-in-out;
+}
+.slide-up {
+  animation: slideUp 1.2s ease-in-out;
+}
+.slide-down {
+  animation: slideDown 1.2s ease-in-out;
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
