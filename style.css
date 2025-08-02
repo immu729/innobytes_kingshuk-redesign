@@ -1111,3 +1111,9 @@ body {
   color: #ffcc00;
 }
 
+/* fix firefox dark issues */
+@media (prefers-color-scheme: dark) {
+  .hero {
+    background-blend-mode: normal !important;
+  }
+}
